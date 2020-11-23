@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity2">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other activity" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+        <Button android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start thread"
+            android:onClick="runThread"
+            android:padding="10dp"
+            />
+
+        <Button android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop thread"
+            android:onClick="stopThread"
+            android:padding="10dp"
+            />
+
+        </LinearLayout>
+
+
+        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/favorites_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#808080"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/text_view_id"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Number to save : "
+                android:layout_row="0"
+                android:layout_column="0"
+                android:padding="10dp"
+                />
+
+        <EditText
+            android:id="@+id/myDataField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:padding="10dp"
+            />
+
+        <Button android:id="@+id/buttonSaveData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save data"
+            android:onClick="saveData"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:padding="10dp"
+            />
+
+        <Button android:id="@+id/buttonLoadData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load data"
+            android:onClick="loadData"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:padding="10dp"
+            />
+        </GridLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button android:id="@+id/buttonDisappear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hide button"
+            android:onClick="hideButton"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:padding="10dp"
+            />
+
+        <Button android:id="@+id/buttonDisappearing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I will disappear"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:padding="10dp"
+            />
+
+    </LinearLayout>
+
+        <Button android:id="@+id/buttonException"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exception generation"
+            android:onClick="generateException"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
